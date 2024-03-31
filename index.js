@@ -24,8 +24,8 @@ app.listen(port, () => {
 });
 
 const statusMessages = [
-  ["Watching Our Lovely Members!", "2+2=4"], // Status messages for client1
-  ["Playing with Discord Bots!", "3+3=6"]    // Status messages for client2
+  ["Taking Care Of our Passengers!", "Operations are reopned"], // Status messages for client1
+  ["Join ToFlight Today!", "Nandi Relasing Soon"]    // Status messages for client2
 ];
 
 let currentIndex1 = 0;

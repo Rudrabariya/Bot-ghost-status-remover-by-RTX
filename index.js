@@ -1,4 +1,5 @@
 const { Client, GatewayIntentBits, ActivityType, TextChannel } = require('discord.js');
+require('dotenv').config();
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -23,13 +24,13 @@ app.listen(port, () => {
 });
 
 const statusMessages = [
-  ["Watching Our Lovely Customers!", "Best and Cheap Products"], // Status messages for client1
-  ["Taking Care of our Passengers", "Fly with FlyGlobal"]    // Status messages for client2
+  ["Watching Our Lovely Members!", "2+2=4"], // Status messages for client1
+  ["Playing with Discord Bots!", "3+3=6"]    // Status messages for client2
 ];
 
 let currentIndex1 = 0;
 let currentIndex2 = 0;
-const channelId = ''; // Fill in the appropriate channel ID
+const channelId = ''; // Make sure to fill in the appropriate channel ID
 
 async function login(tokens) {
   try {
@@ -95,4 +96,4 @@ client2.once('ready', () => {
   }, 5000);
 });
 
-login(['MTIwODc5MDExNzQ5NDU1NDY0NA.GOnP0C.KV1l8_yZja2qagF8du1ZrjtTSki2QIKQktqpqs', 'MTE4NzkwMzM5ODA3MTI1MTA0NA.GNUwD0.xUqE1ziUFIfk6paPUz7P7FAFNo_NSWMdUdsR5g']);
+login([process.env.TOKEN1, process.env.TOKEN2]);
